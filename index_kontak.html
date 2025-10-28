@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak | Kelas Web Design</title>
+
+    <style>
+        /* Reset dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e0dbd6;
+        }
+
+        /* Header */
+        header {
+            background-color: #2d5d27;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 14px;
+        }
+
+        /* Navigasi */
+        nav {
+            background-color: #333;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: left;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            padding: 12px 20px;
+            display: block;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #555;
+        }
+
+        /* Tata letak utama */
+        main {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+            gap: 15px;
+        }
+
+        /* Konten utama */
+        .konten {
+            background-color: white;
+            padding: 15px;
+            flex: 3;
+            border-radius: 3px;
+        }
+
+        .konten h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Formulir */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 400px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #999;
+            border-radius: 4px;
+        }
+
+        textarea {
+            height: 80px;
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #2d5d27;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 120px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3d7d38;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #d3cfcc;
+            padding: 15px;
+            flex: 1;
+            border-radius: 3px;
+        }
+
+        .sidebar h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .sidebar ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d5d27;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul li a {
+                width: 100%;
+                border-top: 1px solid #444;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>KELAS WEB DESIGN PROJECT UJIAN MID SEMESTER</h1>
+        <p>Memuat gabungan antara HTML dan CSS</p>
+    </header>
+
+    <!-- Navigasi -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index_tentang.html">Tentang</a></li>
+            <li><a href="index_kontak.html" class="active">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Konten -->
+    <main>
+        <section class="konten">
+            <h2>Hubungi Kami</h2>
+            <form action="#" method="post">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="pesan">Pesan:</label>
+                <textarea id="pesan" name="pesan" required></textarea>
+
+                <input type="submit" value="Simpan Data">
+            </form>
+        </section>
+
+        <aside class="sidebar">
+            <h3>Tentang Website</h3>
+            <p>Website ini adalah contoh latihan HTML + CSS responsif sederhana dengan animasi.</p>
+            <h4>Menu Sidebar</h4>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="index_tentang.html">Tentang</a></li>
+                <li><a href="index_kontak.html">Kontak</a></li>
+                <li><a href="formulir.html">Formulir</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Website Latihan</p>
+    </footer>
+
+</body>
+</html>

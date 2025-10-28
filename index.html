@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Sederhana</title>
+  <style>
+        .box {
+            width: 200px;
+            padding: 20px;
+            margin: 30px;
+            background-color: rgb(153, 153, 153);
+        }
+        .box{
+            position: relative;
+            left: 0px;
+            transition: left 1s ease;
+        }
+        .box:hover {
+            left:50px;
+        }    
+
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #333;
+            border: none;
+            color: aliceblue;
+            transition: background-color 0.5s ease;
+        }
+        .button:hover {
+            background-color: rgb(32, 81, 65);
+            color: rgb(221, 221, 221);
+        }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #27ae60;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px;
+      text-align: left;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+      min-height: 0;
+    }
+
+    main {
+      flex: 3;
+      padding: 20px;
+    }
+
+    main img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 15px;
+      border-radius: 5px;
+    }
+
+    aside {
+      display: flex;
+      flex: 1;
+      padding: 100px;
+      background-color: #f4f4f4;
+      border-left: 1px solid #ccc;
+    }
+
+    aside h3 {
+      margin-top: 0;
+    }
+
+    aside ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    aside ul li {
+      margin: 8px 0;
+    }
+
+    aside ul li a {
+      text-decoration: none;
+      color: #2c3e50;
+    }
+
+    aside ul li a:hover {
+      color: #27ae60;
+    }
+
+    table {
+      width: 50%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    form {
+      max-width: 500px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form input[type="checkbox"] {
+      width: auto;
+      margin-top: 15px;
+    }
+
+    form button {
+      margin-top: 15px;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #219150;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    KELAS WEB DESIGN PROJECT UJIAN MID SEMESTER <br>
+    <small>Latihan gabungan antara HTML dan CSS</small>
+  </header>
+
+  <nav>
+    <a class="button" href="Index.html">Home</a>
+    <a class="button" href="index_tentang.html">Tentang</a>
+    <a class="button" href="index_kontak.html">Kontak</a>
+  </nav>
+
+  <div class="container">
+    <main>
+      <h2 id="home">Konten Utama</h2>
+      <p>Selamat datang di website latihan Web Design dimana gabungan antara HTML dan CSS.</p>
+      <img src="W.jpg" alt="unklab">
+    </main>
+    
+    <aside class="box">
+      <h3>Tentang Website</h3>
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="index_tentang.html">Tentang</a></li>
+        <li><a href="index_kontak.html">Kontak</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <h2>Tabel Data</h2>
+  <table>
+    <tr>
+      <th>No</th>
+      <th>Nama</th>
+      <th>Kota</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Andi</td>
+      <td>Jakarta</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Budi</td>
+      <td>Bandung</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Wilsen</td>
+      <td>Manado</td>
+    </tr>
+  </table>
+
+  <h2>Formulir Pendaftaran</h2>
+  <form id="formPendaftaran">
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" name="nama" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="kota">Pilih Kota:</label>
+    <select id="kota" name="kota">
+      <option value="">-- Pilih Kota --</option>
+      <option value="jakarta">Jakarta</option>
+      <option value="bandung">Bandung</option>
+      <option value="manado">Manado</option>
+    </select>
+      <label>
+        <input type="checkbox" id="agree" required />
+        Saya setuju dengan syarat & ketentuan
+      </label>
+
+      <button type="submit" id="send">Kirim</button>
+    </form>
+
+    <footer>
+      &copy; 2025 Website Sederhana. Dibuat untuk ujian mid semester.
+    </footer>
+
+    <script>
+      const sendButton = document.getElementById("send");
+      const checkbox = document.getElementById("agree");
+
+      checkbox.addEventListener("click", function () {
+        if (checkbox.checked) {
+          const checked = alert("Apakah Anda yakin ingin mengirim?");
+        }
+      });
+
+      sendButton.addEventListener("click", function () {
+        const konfirmasi = confirm("Terima kasih telah mengirim file!");
+        if (konfirmasi) {
+          alert("Formulir terkirim");
+          form.reset();
+        } else {
+          alert("Anda membatalkan formulir", "#f44336");
+        }
+      });
+    </script>
+</body>
+</html>
